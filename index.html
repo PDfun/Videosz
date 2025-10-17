@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Watch Video</title>
 
-  <!-- Video.js CSS -->
-  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+  <!-- Local Video.js CSS -->
+  <link rel="stylesheet" href="css/video-js.css" />
 
   <style>
     body {
@@ -49,11 +49,11 @@
     </video>
   </div>
 
-  <!-- Video.js Core -->
-  <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+  <!-- Local Video.js Core -->
+  <script src="js/video.min.js"></script>
 
-  <!-- VAST/VPAID Plugin (matching version) -->
-  <script src="https://unpkg.com/videojs-vast-vpaid@2.1.0/dist/videojs_5.vast.vpaid.min.js"></script>
+  <!-- Local VAST/VPAID Plugin -->
+  <script src="js/videojs_5.vast.vpaid.min.js"></script>
 
   <script>
     var player = videojs('my-player');
@@ -61,7 +61,7 @@
     player.ready(function() {
       player.vastClient({
         adTagUrl:
-          'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=sample_ct%3Dlinear&correlator=',
+          'https://guidepaparazzisurface.com/ceef/gdt3g0/tbt/2087591/tlk.xml',
         adsCancelTimeout: 5000,
         adsEnabled: true
       });
