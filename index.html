@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Watch Video</title>
 
   <!-- Video.js Player CSS -->
@@ -10,24 +10,47 @@
 
   <style>
     body {
-      background: #f8f8f8;
+      background: #f9f9f9;
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
-      padding: 40px 0;
+      padding: 20px;
     }
     h2 {
-      font-size: 22px;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
+
+    /* Responsive video container */
     .video-container {
+      position: relative;
+      width: 100%;
       max-width: 800px;
       margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .vjs-big-play-button {
       top: 50% !important;
       left: 50% !important;
       transform: translate(-50%, -50%) !important;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 16px;
+      }
+      body {
+        padding: 10px;
+      }
     }
   </style>
 </head>
@@ -41,8 +64,6 @@
       class="video-js vjs-default-skin vjs-big-play-centered"
       controls
       preload="auto"
-      width="800"
-      height="450"
       poster="https://via.placeholder.com/800x450.png?text=Your+Video+Poster"
       data-setup='{}'>
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
@@ -53,7 +74,7 @@
   <!-- Load Video.js -->
   <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 
-  <!-- Load your ad script after the video player -->
+  <!-- Your ad script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const adConfig = {
