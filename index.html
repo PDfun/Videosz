@@ -44,4 +44,29 @@
       poster="https://via.placeholder.com/800x450.png?text=Video+Poster"
       data-setup='{}'
     >
-      <source src="https://www.w3
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <!-- Video.js Core -->
+  <script src="https://vjs.zencdn.net/7.21.1/video.min.js"></script>
+
+  <!-- Video.js VAST/VPAID Plugin -->
+  <script src="https://unpkg.com/videojs-vast-vpaid/dist/videojs_5.vast.vpaid.min.js"></script>
+
+  <!-- Initialize Player with VAST Ad -->
+  <script>
+    var player = videojs('my-player');
+
+    player.ready(function() {
+      player.vastClient({
+        adTagUrl: 'https://guidepaparazzisurface.com/ceef/gdt3g0/tbt/2087591/tlk.xml',
+        adsCancelTimeout: 5000,
+        adsEnabled: true
+      });
+    });
+  </script>
+
+</body>
+</html>
