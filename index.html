@@ -3,44 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
+  <title>Watch Video</title>
+
+  <!-- Video.js CSS -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      background: #f9f9f9;
+      color: #333;
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      text-align: center;
+      margin: 0;
+      padding: 30px;
+    }
+    .video-container {
+      max-width: 800px;
+      margin: 20px auto;
     }
     h1 {
-      color: #333;
-    }
-    img {
-      max-width: 300px;
-      cursor: pointer;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-    img:hover {
-      transform: scale(1.05);
+      font-size: 24px;
+      margin-bottom: 10px;
     }
   </style>
-  <script>
-    // Auto redirect after 4 seconds
-    setTimeout(function(){
-      window.location.href = "https://jitterspauperusher.com/2084848/"; // 🔗 your redirect link here
-    }, 1000);
-  </script>
 </head>
 <body>
-  <h1>Playing</h1>
-  <!-- Clickable image -->
-  <a href="https://jitterspauperusher.com/2084848/"> <!-- 🔗 your link here -->
-    <img src="image.jpg" alt="Click Me">
-  </a>
+
+  <h1>Watch Video</h1>
+  <p></p>
+
+  <div class="video-container">
+    <video
+      id="my-player"
+      class="video-js vjs-default-skin"
+      controls
+      preload="auto"
+      width="800"
+      height="450"
+      poster="https://via.placeholder.com/800x450.png?text=Video+Poster"
+      data-setup='{}'
+    >
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <!-- Video.js -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+  <!-- VAST/VPAID Plugin -->
+  <script src="https://unpkg.com/videojs-vast-vpaid/dist/videojs_5.vast.vpaid.min.js"></script>
+
+  <!-- Initialize Player with Ad -->
+  <script>
+  videojs('my-player', {
+    plugins: {
+      vastClient: {
+        adTagUrl: 'https://guidepaparazzisurface.com/ceef/gdt3g0/tbt/2087591/tlk.xml',
+        adsCancelTimeout: 5000,
+        adsEnabled: true
+      }
+    }
+  });
+  </script>
+
 </body>
 </html>
