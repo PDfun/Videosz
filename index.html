@@ -4,15 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watch Video</title>
-  <link rel="stylesheet" href="https://vjs.zencdn.net/7.10.2/video-js.css">
+
+  <!-- Video.js Player CSS -->
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 
   <style>
     body {
-      background: #f7f7f7;
+      background: #f8f8f8;
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
       padding: 40px 0;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
     }
     .video-container {
       max-width: 800px;
@@ -44,20 +50,26 @@
     </video>
   </div>
 
+  <!-- Load Video.js -->
   <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 
-  <!-- Your ad script -->
+  <!-- Load your ad script after the video player -->
   <script>
-    window["663790rgmmkj246072llzvto"] = {
-      zoneId: 2087630,
-      domain: "//deductgreedyheadroom.com",
-      options: {
-        insteadOfSelectors: ["#my-player"],
-        insteadOfPlayers: ["other"]
-      }
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      const adConfig = {
+        zoneId: 2087630,
+        domain: "//deductgreedyheadroom.com",
+        options: {
+          insteadOfSelectors: ["#my-player"],
+          insteadOfPlayers: ["other"]
+        }
+      };
+      window["663790rgmmkj246072llzvto"] = adConfig;
+      const script = document.createElement("script");
+      script.src = "https://deductgreedyheadroom.com/zbs.kek.js";
+      document.body.appendChild(script);
+    });
   </script>
-  <script src="https://deductgreedyheadroom.com/zbs.kek.js"></script>
 
 </body>
 </html>
