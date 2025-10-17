@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Watch Video</title>
+  <title>Watch Videos</title>
 
   <!-- Video.js Player CSS -->
   <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
       position: relative;
       width: 100%;
       max-width: 800px;
-      margin: auto;
+      margin: 20px auto;
       overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -56,16 +56,39 @@
 </head>
 <body>
 
-  <h2>Watch & Enjoy</h2>
+  <h2>Watch & Enjoy Multiple Videos</h2>
+
+  <!-- Repeat 5 video players -->
+  <div class="video-container">
+    <video id="player1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://via.placeholder.com/800x450.png?text=Video+1" data-setup='{}'>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
 
   <div class="video-container">
-    <video
-      id="my-player"
-      class="video-js vjs-default-skin vjs-big-play-centered"
-      controls
-      preload="auto"
-      poster="https://via.placeholder.com/800x450.png?text=Your+Video+Poster"
-      data-setup='{}'>
+    <video id="player2" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://via.placeholder.com/800x450.png?text=Video+2" data-setup='{}'>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video id="player3" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://via.placeholder.com/800x450.png?text=Video+3" data-setup='{}'>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video id="player4" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://via.placeholder.com/800x450.png?text=Video+4" data-setup='{}'>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <div class="video-container">
+    <video id="player5" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://via.placeholder.com/800x450.png?text=Video+5" data-setup='{}'>
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
     </video>
@@ -74,21 +97,24 @@
   <!-- Load Video.js -->
   <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 
-  <!-- Your ad script -->
+  <!-- Ad script loader for each player -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const adConfig = {
-        zoneId: 2087630,
-        domain: "//deductgreedyheadroom.com",
-        options: {
-          insteadOfSelectors: ["#my-player"],
-          insteadOfPlayers: ["other"]
-        }
-      };
-      window["663790rgmmkj246072llzvto"] = adConfig;
-      const script = document.createElement("script");
-      script.src = "https://deductgreedyheadroom.com/zbs.kek.js";
-      document.body.appendChild(script);
+      const players = ["player1", "player2", "player3", "player4", "player5"];
+      players.forEach(id => {
+        const adConfig = {
+          zoneId: 2087630,
+          domain: "//deductgreedyheadroom.com",
+          options: {
+            insteadOfSelectors: ["#" + id],
+            insteadOfPlayers: ["other"]
+          }
+        };
+        window["663790rgmmkj246072llzvto"] = adConfig;
+        const script = document.createElement("script");
+        script.src = "https://deductgreedyheadroom.com/zbs.kek.js";
+        document.body.appendChild(script);
+      });
     });
   </script>
 
