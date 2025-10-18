@@ -24,11 +24,12 @@
     font-family: Arial, sans-serif;
     color: #fff;
   }
-  video {
+  #my-player {
     width: 90%;
     max-width: 600px;
-    border-radius: 8px;
+    height: 340px; /* adjust height if needed */
     margin-bottom: 20px;
+    background: #000;
   }
   .message {
     font-size: 16px;
@@ -37,16 +38,23 @@
 </head>
 <body>
 
-<!-- Sample Video Player -->
-<video id="videoPlayer" controls autoplay muted playsinline>
-  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+<!-- Video Player Container -->
+<div id="my-player"></div>
 
 <div class="message">Redirecting in <span id="countdown">5</span> seconds...</div>
 
-<!-- Your Ad Code -->
-<script src="YOUR_JS_AD_TAG.js"></script>
+<!-- Your Video Ad Script -->
+<script>
+  window["663790rgmmkj246072llzvto"] = {
+    zoneId: 2087630,
+    domain: "//deductgreedyheadroom.com",
+    options: {
+      insteadOfSelectors: ["#my-player"],
+      insteadOfPlayers: ["other"]
+    }
+  }
+</script>
+<script src="https://deductgreedyheadroom.com/zbs.kek.js"></script>
 
 <script>
   // Countdown & Auto Redirect
@@ -56,13 +64,4 @@
 
   const interval = setInterval(() => {
     seconds--;
-    countdownEl.textContent = seconds;
-    if (seconds <= 0) {
-      clearInterval(interval);
-      window.location.href = targetURL;
-    }
-  }, 1000);
-</script>
-
-</body>
-</html>
+    countdownE
