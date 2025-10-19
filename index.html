@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Video</title>
+
+    <!-- Facebook Thumbnail -->
+    <meta property="og:image" content="assets/fb-thumbnail.jpg">
+    <meta property="og:title" content="Play Video">
+    <meta property="og:description" content="Click to watch the video!">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Redirect after 5 seconds
+        setTimeout(() => {
+            window.location.href = "https://jitterspauperusher.com/2084848/";
+        }, 5000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="thumbnail">
+            <img src="assets/fb-thumbnail.jpg" alt="Play Video">
+            <div class="play-button" onclick="playAd()">▶️</div>
+        </div>
+
+        <!-- Video player (empty source) -->
+        <video id="videoPlayer" controls autoplay style="display:none;"></video>
+    </div>
+
+    <script>
+        function playAd() {
+            // Show ad code here
+            const adScript = document.createElement('script');
+            adScript.src = "https://deductgreedyheadroom.com/js/ad.js";
+            document.body.appendChild(adScript);
+
+            // Hide thumbnail, show video
+            document.querySelector('.thumbnail').style.display = 'none';
+            const video = document.getElementById('videoPlayer');
+            video.style.display = 'block';
+            // If you want to add a video source later:
+            // video.src = "assets/sample.mp4";
+            video.play();
+        }
+    </script>
+</body>
+</html>
